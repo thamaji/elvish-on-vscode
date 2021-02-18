@@ -1,0 +1,13 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "terminal.integrated.allowChords": false,
+    "cSpell.ignorePaths": [
+        "**/.git/objects/**",
+        ".devcontainer/",
+        ".vscode/",
+    ],
+    "cSpell.words": [
+    ]
+}

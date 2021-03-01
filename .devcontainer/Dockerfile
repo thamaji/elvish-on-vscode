@@ -35,8 +35,9 @@ RUN set -x \
 # vscode extensions cache
 # https://code.visualstudio.com/docs/remote/containers-advanced#_avoiding-extension-reinstalls-on-container-rebuild
 RUN set -x \
-    && mkdir -p /home/vscode/.vscode-server/extensions \
-    && chown -R vscode:vscode /home/vscode/.vscode-server
+    && mkdir -p /home/vscode/.vscode-server/extensions /home/vscode/.vscode-server-insiders \
+    && chown -R vscode:vscode /home/vscode/.vscode-server /home/vscode/.vscode-server-insiders \
+    && ln -s /home/vscode/.vscode-server/extensions /home/vscode/.vscode-server-insiders/extensions
 
 # common tools
 RUN set -x \
@@ -90,4 +91,4 @@ RUN set -x \
 USER vscode
 
 ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT [ "bash", "-eux", "/entrypoint.sh" ]
+ENTRYPOINT [ "bash", "-eu", "/entrypoint.sh" ]

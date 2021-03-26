@@ -6,6 +6,7 @@
 		"dockerfile": "Dockerfile",
 		"context": ".",
 		"args": {
+			"COMPOSE_VERSION": "1.27.4",
 			"ELVISH_VERSION": "v0.15.0",
 		},
 		"target": "devcontainer"
@@ -23,9 +24,24 @@
 		"--init",
 		"--net=host"
 	],
+	"containerEnv": {
+		"LOCAL_WORKSPACE": "${localWorkspaceFolder}"
+	},
 	"extensions": [
 		"champii.language-elvish",
-		"mosapride.zenkaku",
+		"jgclark.vscode-todo-highlight",
 		"streetsidesoftware.code-spell-checker"
-	]
+	],
+	"settings": {
+		"terminal.integrated.allowChords": false,
+		"files.exclude": {
+			"**/.devcontainer/.extensions": true
+		},
+		"files.watcherExclude": {
+			"**/.devcontainer/.extensions": true
+		},
+		"search.exclude": {
+			"**/.devcontainer/.extensions": true
+		}
+	}
 }

@@ -1,18 +1,9 @@
 {
-    "terminal.integrated.allowChords": false,
-    "files.exclude": {
-        "**/.git": true,
-        "**/.DS_Store": true,
-        "**/.devcontainer/.extensions": true,
-    },
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-    },
     "cSpell.ignorePaths": [
         "**/.git/objects/**",
         "**/.devcontainer/**",
         "**/.vscode/**"
     ],
-    "cSpell.words": []
+    "cSpell.words": [
+    ]
 }

@@ -24,10 +24,6 @@
 		"--init",
 		"--net=host"
 	],
-	"containerEnv": {
-		"CONTAINER_WORKSPACE": "${containerWorkspaceFolder}",
-		"LOCAL_WORKSPACE": "${localWorkspaceFolder}"
-	},
 	"extensions": [
 		"champii.language-elvish",
 		"jgclark.vscode-todo-highlight",
